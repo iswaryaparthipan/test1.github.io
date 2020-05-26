@@ -38,7 +38,7 @@ export class WeatherMapComponent implements OnInit {
   getWeather(city, i) {
     if (this.onlineOffline) {
       if (city.length > 0) {
-        this.http.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=0f4a1fe2f11da154d8032643a3628a02").subscribe(res => {
+        this.http.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=0f4a1fe2f11da154d8032643a3628a02").subscribe(res => {
           if (res) {
             this.data[i].weatherDate = res;
             console.log(this.data);
